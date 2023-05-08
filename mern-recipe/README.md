@@ -16,6 +16,12 @@ will have full crud capabilities, Creating, Deleting, and Editing recipes.
 #### Packages
 
 react-router-dom
+cors
+dotenv
+express
+pg
+pg-hstore
+sequelize
 
 #### State Management
 
