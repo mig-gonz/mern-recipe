@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* var */
+  --light: #ffc55c;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 5px red; */
+  margin-top: 5em;
+}
+
+.homeImages {
+  border: solid 5px #3a506b;
+  height: 80vh;
+  border-radius: 5%;
+}
+
+.font-light {
+  /* color: var(--light); */
+  color: white;
+}
