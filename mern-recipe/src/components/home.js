@@ -1,4 +1,3 @@
-// import "../App.css";
 import "../assets/Home.css";
 import Carousel from "react-bootstrap/Carousel";
 import cookies from "../assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg";

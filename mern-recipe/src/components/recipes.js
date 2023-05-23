@@ -6,26 +6,35 @@ import RecipeContext from "../context/recipeContext";
 import Form from "react-bootstrap/Form";
 
 export default function Recipes() {
+  // useNavigate is used to navigate to a new page
   const navigate = useNavigate();
+  // Destructuring props passed down through context
   const { recipes, setRecipes } = useContext(RecipeContext);
+  // Responsible for adding a new recipe name and content
   const [newRecipe, setNewRecipe] = useState({
     name: "",
     content: "",
   });
 
+  // handles the submission of a new recipe name and content
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      // Send a POST request to the API endpoint
       const response = await fetch("http://localhost:4005/api/recipes", {
         method: "POST",
+        // Make sure to serialize the JSON body
         headers: {
           "Content-Type": "application/json",
         },
+        // Serialize the new recipe name and content
         body: JSON.stringify(newRecipe),
       });
 
+      // Check the response status
       if (response.ok) {
+        // Add the new recipe to the recipes state
         const createdRecipe = await response.json();
         setRecipes((prevRecipes) => [...prevRecipes, createdRecipe]);
         setNewRecipe({ name: "", content: "" });
@@ -37,8 +46,10 @@ export default function Recipes() {
     }
   };
 
+  // Delete a recipe
   const handleDelete = async (id) => {
     try {
+      // Send a DELETE request to the API endpoint
       const response = await fetch(`http://localhost:4005/api/recipes/${id}`, {
         method: "DELETE",
       });
@@ -58,14 +69,17 @@ export default function Recipes() {
     }
   };
 
+  // navigate to specific recipe
   const handleEdit = (id) => {
     navigate(`/edit/${id}`);
   };
 
+  // Fetch recipes data from the API endpoint
   useEffect(() => {
     fetch("http://localhost:4005/api/recipes")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
+    // Update the 'recipes' state with the fetched data
   }, [setRecipes]);
 
   return (

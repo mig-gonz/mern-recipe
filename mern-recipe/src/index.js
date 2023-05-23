@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./Index.css";
 
 import { FluentProvider, teamsLightTheme } from "@fluentui/react-components";
 import "bootstrap/dist/css/bootstrap.min.css";
