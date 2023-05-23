@@ -1,8 +1,8 @@
 # MERN STACK Recipe App
 
-## CRUD-A-LICIOUS
+## FlavorHub
 
-My mern stack CRUD-A-LICIOUS recipe app will be a portfolio project and for full stack app build practice. My redcipe app
+My mern stack FlavorHub recipe app will be a portfolio project and for full stack app build practice. My redcipe app
 will have full crud capabilities, Creating, Deleting, and Editing recipes.
 
 #### Components
