@@ -14,7 +14,10 @@ export default function Navigation() {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/recipes">
-              Recipe's
+              My Recipe's
+            </Nav.Link>
+            <Nav.Link as={Link} to="/spoonRecipes">
+              Search Recipe's
             </Nav.Link>
           </Nav>
         </Container>

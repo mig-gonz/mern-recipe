@@ -6,6 +6,8 @@ import RecipeContext from "./context/recipeContext";
 import RecipeContainer from "./components/recipeContainer";
 import Navigation from "./components/navigation";
 import Home from "./components/home";
+import SpoonRecipes from "./components/spoonRecipes";
+import RecipeDisplay from "./components/RecipeDisplay";
 
 function App() {
   // Manages our recipe's state
@@ -31,6 +33,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/recipes" element={<RecipeContainer />} />
               <Route path="/edit/:id" element={<Editrecipe />} />
+              <Route path="/spoonRecipes" element={<SpoonRecipes />} />
+              <Route path="/RecipeDisplay" element={<RecipeDisplay />} />
             </Routes>
           </main>
         </RecipeContext.Provider>
